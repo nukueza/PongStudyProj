@@ -13,6 +13,24 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin Audio/paddle_hit.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Audio/paddle_hit.wav
+
+#begin Audio/score.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Audio/score.wav
+
+#begin Audio/wall_hit.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Audio/wall_hit.wav
+
 #begin Font/myFont.spritefont
 /importer:FontDescriptionImporter
 /processor:FontDescriptionProcessor

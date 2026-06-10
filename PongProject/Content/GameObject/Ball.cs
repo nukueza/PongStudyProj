@@ -1,10 +1,12 @@
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using System;
 
 public class Ball
 {
   public Vector2 Position;
   public Vector2 Velocity;
+  private SoundEffect _sound;
 
   public int Size { get; private set; }
 
@@ -21,10 +23,11 @@ public class Ball
     }
   }
 
-  public Ball(Vector2 pos, int size)
+  public Ball(Vector2 pos, int size, SoundEffect sound)
   {
     Position = pos;
     Size = size;
+    _sound = sound;
     Velocity = Vector2.Zero;
   }
 
@@ -36,11 +39,13 @@ public class Ball
     {
       Position.Y = 0;
       Velocity.Y = Math.Abs(Velocity.Y);
+      _sound.Play();
     }
     else if (Position.Y >= vh - Size)
     {
       Position.Y = vh - Size;
       Velocity.Y = -Math.Abs(Velocity.Y);
+      _sound.Play();
     }
   }
 
