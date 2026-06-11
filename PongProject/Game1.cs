@@ -313,4 +313,14 @@ public class Game1 : Game
     Scored,
     Winning
   }
+
+  protected override void UnloadContent()
+  {
+    _pixel?.Dispose();
+    _score?.Dispose();
+    _hitPaddle?.Dispose();
+    _hitScreen?.Dispose();
+    _renderTarget?.Dispose();
+    base.UnloadContent();
+  }
 }
